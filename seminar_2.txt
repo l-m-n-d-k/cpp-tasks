@@ -81,7 +81,7 @@ int main() {
   return 0;
 }
 
-//task 3.4
+//task 2.4
 #include <iostream>
 #include <iomanip>
 #include <cmath>
