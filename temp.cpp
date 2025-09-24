@@ -1,4 +1,6 @@
-//task 2.4 ()
+//task 2.4 (NOT WORK)
+// i wont to write custome start, finish and step but isn`t work right now
+
 #include <iostream>
 #include <iomanip>
 #include <cmath>
