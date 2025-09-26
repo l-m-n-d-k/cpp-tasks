@@ -1,34 +1,19 @@
-//task 2.4 (NOT WORK)
-// i wont to write custome start, finish and step but isn`t work right now
-
 #include <iostream>
-#include <iomanip>
 #include <cmath>
+
 using namespace std;
 
-int main()
-{
-  double start, finish, step;
-  cout << "write start, finish and step" << endl;
-  cin >> start >> finish >> step;
+int main() {
+    double S, p, n;
+    cout << "write S rubles, p percentages and n years" << endl;
+    cin >> S >> p >> n;
 
-  cout << "table for function y = (x^2 - 2x + 2) / (x - 1)" << endl;
-  cout << "for x from " << start << "to " << finish << "with step " << step << endl;
-  cout << endl;
+    double r = p / 100 / 12;
+    double months = n * 12;
 
-  cout << setw(10) << "x" << setw(15) << "y" << endl;
-  cout << setw(25) << setfill('-') << "" << setfill(' ') << endl;
+    double m = (S * r * pow(1 + r, months)) / (pow(1 + r, months) - 1);
 
-  for (double x = start; x <= finish + 0.001; x += step)
-  {
-    double y = (pow(x, 2) - 2 * x + 2) / (x - 1);
+    cout << m << " rub" << endl;
 
-    cout << fixed << setprecision(1);
-    cout << setw(10) << x;
-
-    cout << fixed << setprecision(3);
-    cout << setw(15) << y << endl;
-  }
-
-  return 0;
+    return 0;
 }
