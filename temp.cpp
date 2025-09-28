@@ -1,4 +1,4 @@
-//task 2.5
+//task 2.6
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -10,7 +10,7 @@ int main() {
 
     double r = p / 100 / 12;
     double months = n * 12;
-    double m = (S * r * pow(1 + r, months)) / (pow(1 + r, months) - 1);
+    double m = (S * r * pow(1 + r, months)) / 12 * (pow(1 + r, months) - 1);
 
     cout << m << " rub" << endl;
 
