@@ -8,9 +8,8 @@ int main() {
     cout << "write S rubles, p percentages and n years" << endl;
     cin >> S >> p >> n;
 
-    double r = p / 100 / 12;
-    double months = n * 12;
-    double m = (S * r * pow(1 + r, months)) / (pow(1 + r, months) - 1);
+    double r = p / 100;
+    double m = (S * r * pow(1 + r, n)) / (12 * (pow(1 + r, n) - 1));
 
     cout << m << " rub" << endl;
 
