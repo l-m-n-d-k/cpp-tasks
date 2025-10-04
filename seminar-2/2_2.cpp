@@ -18,7 +18,7 @@ int main() {
       return 1;
   }
 
-  double z = log(b - y) / (b - x);
+  double z = log(b - y) * sqrt(b - x);
 
   cout << "z = " << z << endl;
 

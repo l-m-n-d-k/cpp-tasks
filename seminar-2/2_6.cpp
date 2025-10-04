@@ -1,36 +1,30 @@
-//task 2.6
 #include <iostream>
-#include <iomanip>
 #include <cmath>
-
 using namespace std;
 
 int main() {
-    double s, p, n;
-    cout << "enter S, p and n " << endl;
-    cin >> s >> p >> n;
+    double S, m, n;
+    cout << "write S, m and n" << endl;
+    cin >> S >> m >> n;
 
-    double min_p = 0;
-    double max_p = 100;
+    double months = n * 12;
+    double left = 0.000001;
+    double right = 1.0;
+    double r, calc_m;
 
-    while (max_p - min_p > 0.0001) {
-        double test_p = (min_p + max_p) / 2;
-        
-        double month_p = test_p / 100 / 12;
-        double months = n * 12;
-        double test_p = (s * month_p * pow(1 + month_p, months)) /
-                             (pow(1 + month_p, months) - 1);
+    for (int i = 0; i < 100; i++) {
+        r = (left + right) / 2;
+        calc_m = (S * r * pow(1 + r, months)) / (pow(1 + r, months) - 1);
 
-        if (test_p < p) {
-            min_p = test_p;
-        }
-        else {
-            max_p = test_p;
-        }
+        if (calc_m < m)
+            left = r;
+        else
+            right = r;
     }
 
-    cout << "percent " << (min_p + max_p) / 2 << "%" << endl;
-    cout << fixed << setprecision(2);
+    double p = r * 12 * 100;
+
+    cout << p << " %" << endl;
 
     return 0;
 }
