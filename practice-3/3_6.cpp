@@ -8,7 +8,7 @@ int main() {
     
     cout << "write 10 numbers:" << endl;
     for (int i = 0; i < 10; i++) {
-        int number;
+        float number;
         cout << "number " << (i + 1) << ": ";
         cin >> number;
         outfile << number << endl;
@@ -17,7 +17,7 @@ int main() {
     outfile.close();
     
     ifstream infile("numbers.txt");
-    int number, sum = 0;
+    float number, sum = 0;
     
     while (infile >> number) {
         sum += number;
