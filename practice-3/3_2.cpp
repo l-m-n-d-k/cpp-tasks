@@ -13,8 +13,8 @@ int main() {
 
   ifstream file(filename);
   if (!file.is_open()) {
-    cerr << "cant open '" << filename << "'" << endl;
-    return 1;
+    cout << "cant open '" << filename << "'" << endl;
+    return 0;
   }
 
   string line;
