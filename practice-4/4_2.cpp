@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    const int WIDTH = 48;
+    int WIDTH = 48;
 
     cout << " ";
     for (int i = 0; i < WIDTH; i++) {
