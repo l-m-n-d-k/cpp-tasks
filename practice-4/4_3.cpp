@@ -36,7 +36,7 @@ int main() {
     }
     
     for (int x = 0; x < WIDTH; x++) {
-        double rad = (x * 2 * PI) / WIDTH * 2;
+        double rad = (x * 2 * M_PI) / WIDTH * 2;
         double sin_val = sin(rad);
         
         int y = center_y - (int)(sin_val * (HEIGHT / 2 - 1));

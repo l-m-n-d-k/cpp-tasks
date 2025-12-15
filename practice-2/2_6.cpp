@@ -4,10 +4,7 @@
 using namespace std;
 
 int main(){
-  double S, m, n, r;
-  r = 0.0001;
-  res = 0;
-  int p;
+  double S, m, n, p, r = 0.0001, res = 0;
   cin >> S >> m >> n;
   while(res < m){
     res = (S * r * pow(1 + r, n)) / (12 * (pow(1 + r, n) - 1));
